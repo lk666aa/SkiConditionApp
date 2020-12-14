@@ -6,7 +6,6 @@ from constants import WEATHER_API_KEY, SNOWFALL, AVERAGE_TEMPERATURE, RAINFALL
 
 UNITS = 'metric'
 
-
 def get_historical_weather(lat, long):
     """
     Main function for calculating the weather statistics.
@@ -33,7 +32,8 @@ def get_historical_weather(lat, long):
         date = str(date.timestamp())[:10]
         data = get_weather_data(lat, long, date)
 
-        # hourly instead of current because hourly gives us a more complete snapshot of historical weather data
+        # hourly instead of current because hourly gives us a more complete
+        # snapshot of historical weather data
         historical_weather.append(data.json()['hourly'])
     return aggregate_weather_stats(historical_weather)
 
@@ -57,9 +57,10 @@ def get_weather_data(lat, long, date):
 
     """
 
-    return requests.get('https://api.openweathermap.org/data/2.5/onecall/timemachine?lat='
-                     + str(lat) + '&lon=' + str(long) + '&dt=' + date + '&appid='
-                     + WEATHER_API_KEY + '&units=' + UNITS)
+    return requests.get(
+        'https://api.openweathermap.org/data/2.5/onecall/timemachine?lat='
+        + str(lat) + '&lon=' + str(long) + '&dt=' + date + '&appid='
+        + WEATHER_API_KEY + '&units=' + UNITS)
 
 def get_past_5_dates():
     """
@@ -84,8 +85,8 @@ def get_past_5_dates():
 
 def aggregate_weather_stats(historical_weather):
     """
-    Function that parse the data in historical_weather. Returns the data of rainfall,
-    temperature and snowfall of the location.
+    Function that parse the data in historical_weather. Returns the data of
+    rainfall, temperature and snowfall of the location.
 
       Parameters
       ----------

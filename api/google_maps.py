@@ -7,7 +7,8 @@ from constants import GOOGLE_MAPS_API_KEY
 def get_coordinates(address):
     """
     https://pypi.org/project/googlemaps/1.0.2/
-    Function that will return the longitude and latitude of the given input address
+    Function that will return the longitude and latitude of the given input
+    address
 
     Parameters
     ----------

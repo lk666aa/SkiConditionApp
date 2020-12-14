@@ -1,0 +1,1 @@
+This project utilized Google Maps API (https://pypi.org/project/googlemaps/1.0.2/) and OpenWeather API (https://openweathermap.org/api/one-call-api).

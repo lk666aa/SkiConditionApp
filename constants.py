@@ -9,5 +9,5 @@ AVERAGE_TEMPERATURE = 'average_temperature'
 RAINFALL = 'rainfall'
 
 SNOW_THRESHOLD = 5  # mm
-RAINFALL_THRESHOLD = 0  # mm
+RAINFALL_THRESHOLD = 1  # mm
 TEMPERATURE_THRESHOLD = 0  # Celcius
