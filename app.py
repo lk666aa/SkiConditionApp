@@ -46,10 +46,10 @@ class SkiConditionsApp:
                 snowfall) + "mm snowfall and average temperatures are "
                   + "{:.2f}".format(
                 temperature) + " Celcius which means the snow "
-                  + "could not have melted.It has rained "
+                  + "could not have melted. It has rained "
                   + "{:.2f}".format(rainfall) + "mm in the past 5 days.")
         else:
-            print("PICK YOUR POSITION at " + address +
+            print("PICK YOUR POISON at " + address +
                   " because there is " + "{:.2f}".format(
                 snowfall) + "mm snowfall and average temperatures are "
                   + "{:.2f}".format(
