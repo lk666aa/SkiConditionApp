@@ -27,34 +27,35 @@ class SkiConditionsApp:
 
         if rainfall > RAINFALL_THRESHOLD:
             print("It is NOT a good time to go ski at " + address +
-                  " because it has rained " + str(rainfall) +
+                  " because it has rained " + "{:.2f}".format(rainfall) +
                   "mm in the past 5 days. The amount of snowfall is "
-                  + str(snowfall) + " and the average tempertures is "
-                  + str(temperature) + ".")
+                  + "{:.2f}".format(
+                snowfall) + "mm and the average tempertures is "
+                  + "{:.2f}".format(temperature) + " Celcius.")
         elif snowfall < SNOW_THRESHOLD and temperature > TEMPERATURE_THRESHOLD:
             print("It is NOT a good time to go ski at " + address +
-                  " because there is " + str(snowfall) +
+                  " because there is " + "{:.2f}".format(snowfall) +
                   "mm snowfall and average temperatures are "
-                  + str(temperature) +
+                  + "{:.2f}".format(temperature) +
                   " Celcius which means the snow has had a chance to melt. "
                   + "It has rained "
-                  + str(rainfall) + "mm in the past 5 days.")
+                  + "{:.2f}".format(rainfall) + "mm in the past 5 days.")
         elif snowfall >= SNOW_THRESHOLD and temperature <= TEMPERATURE_THRESHOLD:
             print("It is a GREAT time to go ski at " + address +
-                  " because there is " + str(
+                  " because there is " + "{:.2f}".format(
                 snowfall) + "mm snowfall and average temperatures are "
-                  + str(
+                  + "{:.2f}".format(
                 temperature) + " Celcius which means the snow "
                   + "could not have melted.It has rained "
-                  + str(rainfall) + "mm in the past 5 days.")
+                  + "{:.2f}".format(rainfall) + "mm in the past 5 days.")
         else:
             print("PICK YOUR POSITION at " + address +
-                  " because there is " + str(
+                  " because there is " + "{:.2f}".format(
                 snowfall) + "mm snowfall and average temperatures are "
-                  + str(
+                  + "{:.2f}".format(
                 temperature) + " Celcius which means conditions can go "
                   + "either way. And the rainfall is "
-                  + str(rainfall) + "mm.")
+                  + "{:.2f}".format(rainfall) + "mm.")
         print("\n")
 
 
